@@ -8,15 +8,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Task Manager</h1>
-    <ul id="tasks"></ul>
 
-<div>
+<div class="d-flex justify-content-center gap-2 mb-3">
     <button onclick="filterTasks('all')">Show All</button>
     <button onclick="filterTasks('pending')">Show Pending</button>
     <button onclick="filterTasks('completed')">Show Completed</button>
 </div>
-<div>
+<div class="d-flex justify-content-center gap-2 mb-3">
     <button onclick="orderTasks('alphabetical')">Sort A-Z</button>
     <button onclick="orderTasks('status')">Sort by Status</button>
 </div>
@@ -31,6 +29,24 @@
 </div>
 
 <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+<div id="message" style= "display: none;"></div>
+
+<div class="container mt-4">
+    <div id="progress-container" class="progress">
+        <div id="progress-bar" class="progress-bar bg-success" role="progressbar" style="width: 0%;"></div>
+    </div>
+</div>
+
+<div class="d-flex justify-content-center mb-3">
+    <input type="text" id="search" class="form-control w-50" placeholder="Search Tasks" onkeyup="searchTask()">
+</div>
+
+
+
+
+
+
 
     <script src="js/script.js"></script>
 </body>
